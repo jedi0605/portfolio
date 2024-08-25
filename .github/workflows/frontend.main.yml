@@ -11,15 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: azure/login@v1
+    
+    - name: Azure Login
+      uses: azure/login@v1
       with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Upload to blob storage
-      uses: azure/CLI@v1
+      uses: azure/storage-blob-upload-action@v1
       with:
-        inlineScript: |
-            az storage blob upload-batch --account-name cloudresumestorageacc --auth-mode key -d '$web' -s frontend/ --overwrite true
+        account-name: cloudresumestorageacc
+        container-name: '$web'
+        connection-string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+        path: frontend/
+        pattern: '*'
     # - name: Purge CDN endpoint
     #   uses: azure/CLI@v1
     #   with:
