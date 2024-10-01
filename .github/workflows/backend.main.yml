@@ -2,7 +2,9 @@ name: deploy_backend
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
+    paths:
+        - 'backend/**'
 
 env:
   AZURE_FUNCTIONAPP_NAME: GetResumeCounter   # set this to your function app name on Azure

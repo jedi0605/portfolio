@@ -9,12 +9,4 @@ namespace Company.Function
         [JsonProperty("count")]
         public int Count { get; set; }
     }
-
-    public class Counter2
-    {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-        [JsonProperty("count")]
-        public int Count { get; set; }
-    }
 }
