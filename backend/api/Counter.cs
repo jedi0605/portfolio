@@ -2,10 +2,19 @@ using Newtonsoft.Json;
 
 namespace Company.Function
 {
-    public class Counter{
+    public class Counter
+    {
         [JsonProperty("id")]
-        public string Id{get;set;}
+        public string Id { get; set; }
         [JsonProperty("count")]
-        public int Count{get;set;}
+        public int Count { get; set; }
+    }
+
+    public class Counter2
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
+        [JsonProperty("count")]
+        public int Count { get; set; }
     }
 }
