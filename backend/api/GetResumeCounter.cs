@@ -26,7 +26,7 @@ namespace Company.Function
             // Add test comment
             log.LogInformation("C# HTTP trigger function processed a request.");
             updatecounter = counter;
-            updatecounter.Count++;            
+            updatecounter.Count += 2;
             var jsonToReturn = JsonConvert.SerializeObject(counter);
             return new HttpResponseMessage(HttpStatusCode.OK)
             {
