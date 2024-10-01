@@ -20,6 +20,8 @@
 *.tar
 *.zip
 
+bin/
+obj/
 # Logs and databases #
 ######################
 *.log
