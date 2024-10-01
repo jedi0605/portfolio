@@ -6,7 +6,6 @@ public class UnitTest1
     [Fact]
     public void Test1()
     {
-        var tes = new Counter();
-        
+        var tes = new Counter();        
     }
 }
