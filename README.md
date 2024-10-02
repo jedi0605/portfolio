@@ -1,41 +1,38 @@
-Certainly! I'll create a README for your project based on the information provided in the codebase. Here's a draft README:
+# CGC Azure Resume Starter
 
-# Azure Resume Challenge
-
-This project is an implementation of the Cloud Guru Azure Resume Challenge, featuring a static website with a visitor counter powered by Azure Functions and Cosmos DB.
+This project is part of the Cloud Resume Challenge (Azure Version). It provides a foundation for creating a personal resume website leveraging Azure services. The website is hosted on Azure Storage Static Web with Azure Front Door for CDN, and includes a visitor counter using Azure Functions and Cosmos DB. In the end, repo interact with GitHub Actions for CI/CD.
 
 ## Project Structure
 
 ```
 .
 ├── frontend/
-│   ├── index.html
-│   ├── css/
-│   ├── js/
-│   └── images/
+│ ├── index.html
+│ ├── css/
+│ ├── js/
+│ └── images/
 ├── backend/
-│   └── api/
+│ └── api/
 └── README.md
 ```
-
 ## Features
 
 - Static HTML/CSS/JavaScript frontend
 - Visitor counter using Azure Functions and Cosmos DB
 - Responsive design
+- CI/CD with GitHub Actions (optional)
 
 ## Prerequisites
 
 - [GitHub account](https://github.com/join)
 - [Azure account](https://azure.microsoft.com/en-us/free)
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
-- [.NET Core 3.1 LTS](https://dotnet.microsoft.com/download/dotnet/3.1)
 - [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=macos%2Ccsharp%2Cbash#install-the-azure-functions-core-tools)
 - [Visual Studio Code](https://code.visualstudio.com)
-- [Visual Code Extensions](https://code.visualstudio.com/docs/introvideos/extend)
-  - [Azure Functions Extensions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
-  - [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
-  - [Azure Storage Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage)
+- Visual Studio Code Extensions:
+  - [Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
+  - [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+  - [Azure Storage](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage)
 
 ## Setup and Deployment
 
@@ -51,13 +48,7 @@ This project is an implementation of the Cloud Guru Azure Resume Challenge, feat
 6. Set up GitHub Actions for CI/CD (optional)
 
 ## Local Development
-
-1. Run the frontend:
-   ```
-   cd frontend
-   python -m http.server 8000
-   ```
-2. Run the backend:
+1. Run the backend:
    ```
    cd backend/api
    func start
@@ -67,11 +58,14 @@ This project is an implementation of the Cloud Guru Azure Resume Challenge, feat
 
 For more detailed instructions and resources, refer to the following sections in the README_copy.md file:
 
+## Good to know
 
-```17:49:README_copy.md
-## Front-end resources
-```
+When using GitHub Actions, please be aware of the resource groups for each service. If your services are in different resource groups, you need to set up the environment variables in GitHub Actions accordingly.
 
+Make sure to:
+- Review your Azure resource structure
+- Update your GitHub Secrets with the appropriate resource group names
+- Modify your workflow files to use the correct resource group variables
 
 ## License
 
